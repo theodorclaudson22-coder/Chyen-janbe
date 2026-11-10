@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chyen Janbe Store</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#101010;
+ color:white;
+}
+header{
+ background:#1b1b1b;
+ padding:20px;
+ text-align:center;
+ border-bottom:3px solid #e50914;
+}
+header h1{color:#ff2020;margin:5px}
+header p{color:#ccc}
+.hero{
+ text-align:center;
+ padding:35px 15px;
+ background:linear-gradient(135deg,#300000,#111);
+}
+.hero h2{font-size:27px}
+.hero button,.buy{
+ background:#e50914;
+ color:white;
+ border:0;
+ padding:12px 20px;
+ border-radius:8px;
+ font-weight:bold;
+ cursor:pointer;
+}
+.container{padding:20px}
+.container h2{text-align:center;color:#ff3030}
+.products{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:14px;
+}
+.card{
+ background:#202020;
+ padding:15px;
+ border-radius:12px;
+ text-align:center;
+ border:1px solid #383838;
+}
+.card .emoji{font-size:38px}
+.card h3{font-size:17px}
+.card p{color:#bbb;font-size:13px}
+.buy{width:100%}
+.contact{
+ text-align:center;
+ padding:25px;
+ background:#202020;
+ margin-top:25px;
+}
+footer{
+ text-align:center;
+ padding:20px;
+ color:#aaa;
+ font-size:13px;
+}
+</style>
+</head>
+<body>
 
+<header>
+<h1>🐺 CHYEN JANBE STORE</h1>
+<p>GAME TOP UP & DIGITAL SERVICES</p>
+</header>
+
+<section class="hero">
+<h2>BYENVINI NAN CHYEN JANBE STORE</h2>
+<p>Tout sèvis Gaming ak Digital ou yo nan yon sèl kote!</p>
+<button onclick="document.getElementById('shop').scrollIntoView()">
+ACHÈTE KOUNYE A
+</button>
+</section>
+
+<div class="container" id="shop">
+<h2>🎮 GAME TOP UP</h2>
+<div class="products">
+
+<div class="card">
+<div class="emoji">💎</div>
+<h3>Free Fire</h3>
+<p>Diamonds Top Up</p>
+<button class="buy" onclick="order('Free Fire Diamonds')">Kòmande</button>
+</div>
+
+<div class="card">
+<div class="emoji">🎯</div>
+<h3>PUBG Mobile</h3>
+<p>UC Top Up</p>
+<button class="buy" onclick="order('PUBG Mobile UC')">Kòmande</button>
+</div>
+
+<div class="card">
+<div class="emoji">⚽</div>
+<h3>eFootball</h3>
+<p>Coins Top Up</p>
+<button class="buy" onclick="order('eFootball Coins')">Kòmande</button>
+</div>
+
+<div class="card">
+<div class="emoji">🔥</div>
+<h3>Mobile Legends</h3>
+<p>Diamonds Top Up</p>
+<button class="buy" onclick="order('Mobile Legends Diamonds')">Kòmande</button>
+</div>
+
+</div>
+
+<h2>📺 DIGITAL SERVICES</h2>
+<div class="products">
+
+<div class="card">
+<div class="emoji">🎬</div>
+<h3>Netflix</h3>
+<p>Abonnement Netflix</p>
+<button class="buy" onclick="order('Netflix')">Kòmande</button>
+</div>
+
+<div class="card">
+<div class="emoji">🎵</div>
+<h3>Spotify</h3>
+<p>Spotify Premium</p>
+<button class="buy" onclick="order('Spotify Premium')">Kòmande</button>
+</div>
+
+</div>
+</div>
+
+<section class="contact">
+<h2>📞 KONTAKTE NOU</h2>
+<p>Pou kòmande oswa mande pri, kontakte nou sou WhatsApp.</p>
+<button class="buy" onclick="order('Enfòmasyon sou sèvis yo')">
+KONTAKTE NOU
+</button>
+</section>
+
+<footer>
+<p>© 2026 CHYEN JANBE STORE</p>
+<p>Tout dwa rezève.</p>
+</footer>
+
+<script>
+function order(product){
+ const phone="50956683770";
+ const message="Bonjou Chyen Janbe Store! Mwen vle kòmande: "+product;
+ window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(message),"_blank");
+}
+</script>
+
+</body>
+  </html>
